@@ -159,10 +159,10 @@ export async function runAI(filePath: string) {
             return false;
         }
 
-        // Step 6: Save Response to File
-        const outputPath = path.resolve('./ai-response/', `response-${Date.now()}.json`);
-        await fs.writeFile(outputPath, JSON.stringify(response, null, 2));
-        console.log(`Response saved to ${outputPath}`);
+        // Step 6: Save Response to File (only on local)
+        // const outputPath = path.resolve('./ai-response/', `response-${Date.now()}.json`);
+        // await fs.writeFile(outputPath, JSON.stringify(response, null, 2));
+        // console.log(`Response saved to ${outputPath}`);
 
         return response;
     } catch (error) {

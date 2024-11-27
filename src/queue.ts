@@ -1,7 +1,7 @@
 import type { ReportData } from "./interfaces.js";
 import { getAndStoreScreenshot, runAI } from './utils.js';
 import { db } from "./index.js";
-import { existsSync } from "fs";
+import { existsSync, unlinkSync } from "fs";
 import { MAX_JOBS_PER_MINUTE } from "./config.js";
 
 const jobQueue: Array<{ reportId: string; reportData: ReportData }> = [];
@@ -100,6 +100,8 @@ async function processQueue() {
                 console.log({ error: 'Failed to insert report result' }, reportResultDataRes);
             }
 
+            //  delete file from local storage
+            unlinkSync(filePath);
             console.log(`Job for reportId: ${reportId} completed successfully`);
         } catch (error) {
             console.error(`Error processing job for reportId: ${reportId}`, error);
