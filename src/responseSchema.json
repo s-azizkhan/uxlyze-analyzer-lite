@@ -159,6 +159,7 @@
         }
       },
       "required": [
+        "score",
         "issues",
         "suggestions"
       ]
