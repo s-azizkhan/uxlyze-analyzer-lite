@@ -1,0 +1,256 @@
+{
+  "type": "object",
+  "properties": {
+    "total_score": {
+      "type": "number"
+    },
+    "website_category": {
+      "type": "string"
+    },
+    "website_category_score": {
+      "type": "number"
+    },
+    "color_scheme": {
+      "type": "object",
+      "properties": {
+        "primary_colors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "secondary_colors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "accent_colors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "primary_colors",
+        "secondary_colors",
+        "accent_colors"
+      ],
+      "description": "Color scheme extracted from the website, including primary, secondary, and accent colors"
+    },
+    "usability": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "number"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "score",
+        "issues",
+        "suggestions"
+      ]
+    },
+    "visual_design": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "number"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "score",
+        "issues",
+        "suggestions"
+      ]
+    },
+    "typography": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "number"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "score",
+        "issues",
+        "suggestions"
+      ]
+    },
+    "cta_design": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "number"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "score",
+        "issues",
+        "suggestions"
+      ]
+    },
+    "navigation": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "number"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "issues",
+        "suggestions"
+      ]
+    },
+    "accessibility": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "number"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "score",
+        "issues",
+        "suggestions"
+      ]
+    },
+    "user_flow": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "number"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "score",
+        "issues",
+        "suggestions"
+      ]
+    },
+    "interactivity": {
+      "type": "object",
+      "properties": {
+        "score": {
+          "type": "number"
+        },
+        "issues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "score",
+        "issues",
+        "suggestions"
+      ]
+    }
+  },
+  "required": [
+    "total_score",
+    "website_category",
+    "website_category_score",
+    "color_scheme",
+    "usability",
+    "visual_design",
+    "typography",
+    "cta_design",
+    "navigation",
+    "accessibility",
+    "user_flow",
+    "interactivity"
+  ]
+}

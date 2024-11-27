@@ -1,0 +1,428 @@
+{
+  "type": "object",
+  "properties": {
+    "total_score": {
+      "type": "number",
+      "description": "The aggregate score of the website based on all evaluated categories"
+    },
+    "website_category": {
+      "type": "string",
+      "description": "The classification of the website based on its visible structure and design"
+    },
+    "website_category_score": {
+      "type": "number",
+      "description": "Score for the appropriateness and execution of the website's design according to its category"
+    },
+    "color_scheme": {
+      "type": "object",
+      "description": "Color scheme extracted from the website, including primary, secondary, and accent colors",
+      "properties": {
+        "primary_colors": {
+          "type": "array",
+          "description": "Array of colors (as hex codes or color names)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "secondary_colors": {
+          "type": "array",
+          "description": "Array of colors (as hex codes or color names)",
+          "items": {
+            "type": "string"
+          }
+        },
+        "accent_colors": {
+          "type": "array",
+          "description": "Array of colors (as hex codes or color names)",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "usability": {
+      "type": "object",
+      "description": "Analyzes the organization of elements and user paths in the visible layout",
+      "properties": {
+        "score": {
+          "type": "number",
+          "description": "Score representing the performance of the website in this category"
+        },
+        "issues": {
+          "type": "array",
+          "description": "Issues found based on the screenshot",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Issue description"
+              },
+              "location": {
+                "type": "string",
+                "description": "Location on the page"
+              },
+              "severity": {
+                "type": "string",
+                "description": "Severity of the issue"
+              }
+            }
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "description": "Actionable suggestions for improvements",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Suggested fix or improvement"
+              },
+              "expected_impact": {
+                "type": "string",
+                "description": "Impact of the suggested improvement"
+              }
+            }
+          }
+        }
+      }
+    },
+    "visual_design": {
+      "type": "object",
+      "description": "Evaluates visual aesthetics, color schemes, and brand coherence",
+      "properties": {
+        "score": {
+          "type": "number",
+          "description": "Score representing the performance of the website in this category"
+        },
+        "issues": {
+          "type": "array",
+          "description": "Issues found based on the screenshot",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Issue description"
+              },
+              "location": {
+                "type": "string",
+                "description": "Location on the page"
+              },
+              "severity": {
+                "type": "string",
+                "description": "Severity of the issue"
+              }
+            }
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "description": "Actionable suggestions for improvements",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Suggested fix or improvement"
+              },
+              "expected_impact": {
+                "type": "string",
+                "description": "Impact of the suggested improvement"
+              }
+            }
+          }
+        }
+      }
+    },
+    "typography": {
+      "type": "object",
+      "description": "Assesses font legibility, sizing, and consistency",
+      "properties": {
+        "score": {
+          "type": "number",
+          "description": "Score representing the performance of the website in this category"
+        },
+        "issues": {
+          "type": "array",
+          "description": "Issues found based on the screenshot",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Issue description"
+              },
+              "location": {
+                "type": "string",
+                "description": "Location on the page"
+              },
+              "severity": {
+                "type": "string",
+                "description": "Severity of the issue"
+              }
+            }
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "description": "Actionable suggestions for improvements",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Suggested fix or improvement"
+              },
+              "expected_impact": {
+                "type": "string",
+                "description": "Impact of the suggested improvement"
+              }
+            }
+          }
+        }
+      }
+    },
+    "cta_design": {
+      "type": "object",
+      "description": "Examines the design, prominence, and effectiveness of CTAs",
+      "properties": {
+        "score": {
+          "type": "number",
+          "description": "Score representing the performance of the website in this category"
+        },
+        "issues": {
+          "type": "array",
+          "description": "Issues found based on the screenshot",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Issue description"
+              },
+              "location": {
+                "type": "string",
+                "description": "Location on the page"
+              },
+              "severity": {
+                "type": "string",
+                "description": "Severity of the issue"
+              }
+            }
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "description": "Actionable suggestions for improvements",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Suggested fix or improvement"
+              },
+              "expected_impact": {
+                "type": "string",
+                "description": "Impact of the suggested improvement"
+              }
+            }
+          }
+        }
+      }
+    },
+    "navigation": {
+      "type": "object",
+      "description": "Reviews visible navigation structure and intuitiveness",
+      "properties": {
+        "score": {
+          "type": "number",
+          "description": "Score representing the performance of the website in this category"
+        },
+        "issues": {
+          "type": "array",
+          "description": "Issues found based on the screenshot",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Issue description"
+              },
+              "location": {
+                "type": "string",
+                "description": "Location on the page"
+              },
+              "severity": {
+                "type": "string",
+                "description": "Severity of the issue"
+              }
+            }
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "description": "Actionable suggestions for improvements",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Suggested fix or improvement"
+              },
+              "expected_impact": {
+                "type": "string",
+                "description": "Impact of the suggested improvement"
+              }
+            }
+          }
+        }
+      }
+    },
+    "accessibility": {
+      "type": "object",
+      "description": "Identifies potential accessibility issues based on visual elements",
+      "properties": {
+        "score": {
+          "type": "number",
+          "description": "Score representing the performance of the website in this category"
+        },
+        "issues": {
+          "type": "array",
+          "description": "Issues found based on the screenshot",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Issue description"
+              },
+              "location": {
+                "type": "string",
+                "description": "Location on the page"
+              },
+              "severity": {
+                "type": "string",
+                "description": "Severity of the issue"
+              }
+            }
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "description": "Actionable suggestions for improvements",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Suggested fix or improvement"
+              },
+              "expected_impact": {
+                "type": "string",
+                "description": "Impact of the suggested improvement"
+              }
+            }
+          }
+        }
+      }
+    },
+    "user_flow": {
+      "type": "object",
+      "description": "Analyzes content organization and flow of visible information",
+      "properties": {
+        "score": {
+          "type": "number",
+          "description": "Score representing the performance of the website in this category"
+        },
+        "issues": {
+          "type": "array",
+          "description": "Issues found based on the screenshot",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Issue description"
+              },
+              "location": {
+                "type": "string",
+                "description": "Location on the page"
+              },
+              "severity": {
+                "type": "string",
+                "description": "Severity of the issue"
+              }
+            }
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "description": "Actionable suggestions for improvements",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Suggested fix or improvement"
+              },
+              "expected_impact": {
+                "type": "string",
+                "description": "Impact of the suggested improvement"
+              }
+            }
+          }
+        }
+      }
+    },
+    "interactivity": {
+      "type": "object",
+      "description": "Evaluates visual cues for interactivity, such as CTA, buttons or forms",
+      "properties": {
+        "score": {
+          "type": "number",
+          "description": "Score representing the performance of the website in this category"
+        },
+        "issues": {
+          "type": "array",
+          "description": "Issues found based on the screenshot",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Issue description"
+              },
+              "location": {
+                "type": "string",
+                "description": "Location on the page"
+              },
+              "severity": {
+                "type": "string",
+                "description": "Severity of the issue"
+              }
+            }
+          }
+        },
+        "suggestions": {
+          "type": "array",
+          "description": "Actionable suggestions for improvements",
+          "items": {
+            "type": "object",
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "Suggested fix or improvement"
+              },
+              "expected_impact": {
+                "type": "string",
+                "description": "Impact of the suggested improvement"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
